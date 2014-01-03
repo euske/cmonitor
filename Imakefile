@@ -1,0 +1,22 @@
+XCOMM  Imakefile for cmonitor
+XCOMM
+
+CMONITOR_VERSION=20100726
+
+DEPLIBS = XawClientDepLibs XkbClientDepLibs
+LOCAL_LIBRARIES = XawClientLibs XkbClientLibs
+DEFINES = XkbClientDefines 
+
+CDEBUGFLAGS = -g -Wall
+
+SRCS = CMWidget.c cmonitor.c
+OBJS = CMWidget.o cmonitor.o
+
+ComplexProgramTarget(cmonitor)
+
+test:: $(PROGRAM)
+	./$(PROGRAM)
+
+pack:: distclean
+	cd ..; tar c --numeric-owner --gzip --dereference \
+		-f cmonitor-$(CMONITOR_VERSION).tar.gz cmonitor

@@ -1,0 +1,23 @@
+.TH MONITOR 1 "July 2010"
+.SH NAME
+cmonitor \- a monitor
+.SH SYNTAX
+\fBcmonitor \fP 
+[ \fB\-display\fP \fIdpy\fP ]
+[ \fB\-geometry\fP \fIgeom\fP ]
+[ \fB\-update\fP \fImsec\fP ]
+
+.SH DESCRIPTION
+\fIcmonitor\fP is a monitor.
+.PP
+.SH OPTIONS
+.PP
+.TP 8
+.B \-display \fIdpy\fP
+Specifies an X display name.
+.TP 8
+.B \-geometry \fIgeom\fP
+Window geometry.
+.TP 8
+.B \-update \fImsec\fP
+Update frequency.
